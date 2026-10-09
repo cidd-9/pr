@@ -1,1 +1,302 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f5e9e6">
+  <title>For Priya ♡</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-theme="romantic">
+
+  <!-- Welcome overlay -->
+  <div id="welcome-overlay">
+    <div class="glass-card welcome-card">
+      <div class="welcome-flower">✿</div>
+      <p class="eyebrow">Happy Birthday</p>
+      <h1>Priya ♡</h1>
+      <p>Made something for you 👉🏻👈🏻
+      wanna see???</p>
+      <button id="start-app-btn" class="btn primary-btn">
+        Yes<i class="fa-solid fa-heart"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Background effects -->
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+  <canvas id="fx-canvas"></canvas>
+
+  <!-- Floating controls -->
+  <div class="floating-controls">
+    <button id="music-toggle-btn" class="floating-btn" aria-label="Toggle music">
+      <i id="music-icon" class="fa-solid fa-volume-xmark"></i>
+    </button>
+    <button id="theme-toggle-btn" class="floating-btn" aria-label="Choose theme">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+  </div>
+
+  <!-- Theme drawer -->
+  <aside id="theme-panel" class="sidebar hidden">
+    <div class="sidebar-header">
+      <h3>Choose your mood ✨</h3>
+      <button id="close-sidebar-btn" class="icon-btn" aria-label="Close themes">×</button>
+    </div>
+
+    <div class="theme-options">
+      <button class="theme-card active" data-theme-choice="romantic">
+        <span class="theme-color-preview romantic-preview"></span>
+        Romantic Pink
+      </button>
+      <button class="theme-card" data-theme-choice="midnight">
+        <span class="theme-color-preview midnight-preview"></span>
+        Midnight Purple
+      </button>
+      <button class="theme-card" data-theme-choice="sunset">
+        <span class="theme-color-preview sunset-preview"></span>
+        Sunset Glow
+      </button>
+      <button class="theme-card" data-theme-choice="aurora">
+        <span class="theme-color-preview aurora-preview"></span>
+        Emerald Aurora
+      </button>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <div class="nav-brand"><span>♡</span></div>
+    <div class="nav-links">
+      <button class="nav-item active" data-page="1" aria-label="Home">
+        <i class="fa-solid fa-house"></i><span>Home</span>
+      </button>
+      <button class="nav-item" data-page="2">
+        <i class="fa-regular fa-images"></i><span>Gallery</span>
+      </button>
+      <button class="nav-item" data-page="3">
+        <i class="fa-regular fa-envelope"></i><span>Letter</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main pages -->
+  <main class="app-container">
+
+    <!-- PAGE 1: HOME -->
+    <section id="page-1" class="page active-page">
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <div class="badge-pill">
+            <i class="fa-solid fa-sparkles"></i>
+            Made with ai, and thodi mehnat
+          </div>
+
+          <p class="handwritten">Hope you'll like it🥹</p>
+
+          <h1 class="title-display">
+            Happy<br>
+            <span>Birthday,</span><br>
+            Priya.
+          </h1>
+
+          <p class="subtitle-display">
+            May this new chapter of your life be filled with little moments that turn into beautiful memories, dreams that slowly become reality, and a happiness so genuine that even your saddest days can't take away your smile. Happy Birthday! ♡🎂✨”
+          </p>
+
+          <p class="birthday-date">09 · 10 · 2026</p>
+
+          <div class="hero-actions">
+            <button class="btn primary-btn" data-go="2">
+              Visit your memory wall
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="decor-flower flower-one">✿</div>
+          <div class="decor-flower flower-two">✾</div>
+
+          <div class="hero-photo-frame">
+            <img src="2.jpg" alt="A special birthday memory" class="hero-photo">
+            <div class="photo-caption">
+              <span>for your special day</span>
+              <strong>a little moment ♡</strong>
+            </div>
+          </div>
+
+          <div class="floating-note">stay smiling<br>always ✧</div>
+        </div>
+      </div>
+
+      <div class="page-indicator">01 <span>—</span> 03</div>
+    </section>
+
+    <!-- PAGE 2: GALLERY -->
+    <section id="page-2" class="page">
+      <div class="content-card glass-card gallery-card">
+        <div class="section-heading">
+          <p class="eyebrow">01 · A LITTLE COLLECTION</p>
+          <h2>Your Memory <em>Wall.</em></h2>
+          <p class="section-subtitle">
+            Three little snapshots that deserve their own tiny gallery.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="memory-card memory-one">
+            <div class="img-wrapper">
+              <img src="./1.jpg" alt="Memory one">
+            </div>
+            <p class="card-caption">A little moment to keep ♡</p>
+            <span class="memory-number">01</span>
+          </article>
+
+          <article class="memory-card memory-two">
+            <div class="img-wrapper">
+              <img src="./3.jpg" alt="Memory two">
+            </div>
+            <p class="card-caption">One for the memories ✿</p>
+            <span class="memory-number">02</span>
+          </article>
+
+          <article class="memory-card memory-three">
+            <div class="img-wrapper">
+              <img src="./4.jpg" alt="Memory three">
+            </div>
+            <p class="card-caption">A little piece of happiness</p>
+            <span class="memory-number">03</span>
+          </article>
+        </div>
+
+        <div class="button-group">
+          <button class="btn secondary-btn" data-go="1">
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+          <button class="btn primary-btn" data-go="3">
+            Next page<i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="page-indicator">02 <span>—</span> 03</div>
+    </section>
+
+    <!-- PAGE 3: LETTER -->
+    <section id="page-3" class="page">
+      <div class="content-card glass-card message-card">
+        <div class="letter-decoration">✿</div>
+
+        <div class="section-heading">
+          <p class="eyebrow">02 · A LITTLE🤏🏻 LETTER</p>
+          <h2>Happy Birthday<em>choti bacchi</em></h2>
+          <p class="section-subtitle">
+            
+          </p>
+        </div>
+
+        <article class="letter-paper">
+          <div class="letter-top">
+            <span>09 OCTOBER 2026</span>
+            <span>♡</span>
+          </div>
+
+          <h3>Dear Choti Bacchi,</h3>
+
+          <p>
+            Happy birthday! I hope today reminds you of all the
+            lovely things that make you who you are. You deserve
+            a day full of smiles, warmth, unexpected little joys,
+            and people who make you feel appreciated.
+          </p>
+
+          <p>
+            As you begin another year, I hope you find new reasons
+            to laugh, courage to chase the things you dream about,
+            and plenty of beautiful moments worth remembering.
+            Even the ordinary days should bring you something good.
+          </p>
+
+          <p>
+            Keep being yourself, keep dreaming big, and don't forget
+            to take care of that wonderful person you are.
+            I hope this next chapter is kinder, brighter, and more
+            exciting than you imagined.
+          </p>
+
+          <p>
+            And haaa lastly sorry for today haa wo late hogya tha so ig tune daant bhi khaya hoga so sorry for that too and haa teko raat ko wish nhi kr paya tha uske liye bhi sorry 🥲 bhai mei bahot alsi hu to sogya tha mei anyways I hope your day was enjoyable....... 
+          </p>
+
+          <div class="letter-signature">
+            With lots of love,
+            <span>Tera alsi senior ✨</span>
+          </div>
+        </article>
+
+        <div class="response-box">
+          <p class="response-question">Ab meko maaf Kiya na?? </p>
+          <div class="response-actions">
+            <button class="btn primary-btn" data-response="yes">
+              Ha kr Diya 
+            </button>
+            <button class="btn playful-btn" data-response="maybe">
+              Nhi kiya 
+            </button>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button class="btn secondary-btn" data-go="2">
+            <i class="fa-solid fa-arrow-left"></i> Back to gallery
+          </button>
+          <button class="btn primary-btn" id="replay-btn">
+            Start again <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="page-indicator"> <span></span> </div>
+    </section>
+
+  </main>
+
+  <!-- Page arrows -->
+  <button id="prev-page-btn" class="page-arrow left-arrow" aria-label="Previous page">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button id="next-page-btn" class="page-arrow right-arrow" aria-label="Next page">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <!-- Response modal -->
+  <div id="response-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card glass-card">
+      <button class="modal-close" id="close-modal-btn" aria-label="Close">×</button>
+      <div id="modal-icon" class="modal-icon">🎂</div>
+      <h3 id="modal-title">Yayyy! ♡</h3>
+      <p id="modal-desc">
+        I hope your birthday is full of lovely surprises.
+      </p>
+      <button class="btn primary-btn" id="modal-ok-btn">Okayy♡</button>
+    </div>
+  </div>
+
+  <!-- Music -->
+  <audio id="bg-audio" src="./bday.mp3" loop preload="none"></audio>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
+
